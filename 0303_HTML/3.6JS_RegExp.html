@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegExp</title>
+    <script>
+        var reg1=new RegExp("\\w{5,10}");
+        var reg2=/^\w{6,12}$/;
+        var reg3=new RegExp("\\d{,2}");
+        var name="123466";
+        var name1="123456789";
+        var num=1234;
+        alert(reg1.test(name));
+        alert(reg2.test(name1));
+        alert(reg3.test(num));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

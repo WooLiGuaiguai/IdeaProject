@@ -1,0 +1,45 @@
+寻找两个有序数组的中位数                                /Code_Test/数组/sz1
+双指针：
+有序数组的 Two Sum                                      /Code_Test/数组/sz2   167. Two Sum II - Input array is sorted
+判断一个非负整数是否为两个整数的平方和                  /Code_Test/数组/sz3   633. Sum of Square Numbers (Easy)
+反转字符串中的元音字母                                  /Code_Test/数组/sz4   345. Reverse Vowels of Ali.a String (Easy)
+回文字符串                                              /Code_Test/数组/sz5   680. Valid Palindrome II (Easy)
+归并两个有序数组                                        /Code_Test/数组/sz6   88.  Merge Sorted Array (Easy)
+判断链表是否存在环                                      /Code_Test/数组/sz7   141. Linked List Cycle (Easy)
+通过删除字母匹配到字典里最长单词                        /Code_Test/数组/sz8   524. Longest Word in Dictionary through Deleting (Medium)
+
+排序：
+数组中的第K个最大元素                                   /Code_Test/排序/px1   215. Kth Largest Element in an Array (Medium)
+荷兰国旗问题                                            /Code_Test/排序/px2   75. Sort Colors (Medium)
+前 K 个高频元素                                         /Code_Test/排序/px3   347. Top K Frequent Elements (Medium)
+根据字符出现频率排序                                    /Code_Test/排序/px3   451. Sort Characters By Frequency (Medium)
+
+贪心算法
+455. 分发饼干                                           /Code_Test/贪心算法/GA1
+435. 无重叠区间                                         /Code_Test/贪心算法/GA2
+452. 用最少数量的箭引爆气球                             /Code_Test/贪心算法/GA2
+406. 根据身高重建队列                                   /Code_Test/贪心算法/GA3
+121. 买卖股票的最佳时机                                 /Code_Test/贪心算法/GA4
+122. 买卖股票的最佳时机 II                              /Code_Test/贪心算法/GA4
+605. 种花问题                                           /Code_Test/贪心算法/GA5
+392. 判断子序列                                         /Code_Test/贪心算法/GA6
+665. 判断一个数组是否能只修改一个数就成为非递减数组     /Code_Test/贪心算法/GA7    重点看
+53.  最大子序和                                         /Code_Test/贪心算法/GA8    重点看
+763. 划分字母区间                                       /Code_Test/贪心算法/GA9    重点
+
+二分查找                    /Code_Test/查找/binary_search
+分治思想                    /Code_Test/divide_conque
+搜索查找BFS                 /Code_Test/查找/BFS
+搜索查找DFS                 /Code_Test/查找/DFS
+搜索查找回溯                /Code_Test/查找/Recall   /Code_Test/查找/Recall2
+
+动态规划                    /Code_Test/动态规划
+递归和动态规划都是将原问题拆成多个子问题然后求解，他们之间最本质的区别是，动态规划保存了子问题的解，避免重复计算
+1.菲波那切数列              /Code_Test/动态规划/Fibonacci_Test
+2.矩阵路径                  /Code_Test/动态规划/Cube
+3.数组区间                  /Code_Test/动态规划/shuz
+4.分割整数                  /Code_Test/动态规划/divide_num
+5.最长子序列                /Code_Test/动态规划/Longest_Subsequence
+6.0-1背包问题               /Code_Test/动态规划/BagProblem
+
+

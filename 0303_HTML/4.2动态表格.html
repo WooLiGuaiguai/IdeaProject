@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格</title>
+    <style>
+        div{
+            text-align: center;
+            margin-top: 100px;
+        }
+        table{
+            border: 1px solid;
+            margin: auto;
+            margin-top: 50px;
+            width: 500px;
+        }
+        td,th{
+            text-align: center;
+            border: 1px solid;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <input id="id" type="text" placeholder="请输入编号">
+    <input id="name" type="text" placeholder="请输入姓名">
+    <input id="sex" type="text" placeholder="请输入性别">
+
+    <input id="btn" type="button" value="添加">
+</div>
+<table id="biao">
+    <caption>学生信息表</caption>
+    <tr>
+        <td>1</td>
+        <td>男</td>
+        <td>古力娜扎</td>
+        <td>
+            <input type="button" value="删除" onclick=del_fun(this)></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>男</td>
+        <td>迪丽热巴</td>
+        <td>
+            <input type="button" value="删除" onclick=del_fun(this)></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>女</td>
+        <td>努尔基奇</td>
+        <td>
+            <input type="button" value="删除" onclick=del_fun(this)></td>
+    </tr>
+</table>
+<script>
+    /*var elementById_btn = document.getElementById("btn");
+    elementById_btn.onclick=function () {
+        //首先是获取输入的每一个元素值
+        var elementById_id = document.getElementById("id");
+        var id=elementById_id.value;
+        var elementById_name = document.getElementById("name");
+        var name=elementById_name.value;
+        var elementById_sex = document.getElementById("sex");
+        var sex=elementById_sex.value;
+        //然后是将每一个元素值放到一个文本元素中，再将这个文本元素设置成为单元格元素的孩子节点
+        var id_td = document.createElement("td");
+        var text = document.createTextNode(id);
+        id_td.appendChild(text);
+        var name_td = document.createElement("td");
+        text = document.createTextNode(name);
+        name_td.appendChild(text);
+        var sex_td = document.createElement("td");
+        text = document.createTextNode(sex);
+        sex_td.appendChild(text);
+        var delete_td = document.createElement("td");
+        var button = document.createElement("input");
+        button.setAttribute("type","button");
+        button.setAttribute("value","删除");
+        button.setAttribute("onclick","del_fun(this);");//需要注意
+        delete_td.appendChild(button);
+        //然后获取一个行元素对象 把每个单元格对象设置成行元素的孩子节点
+        var tr = document.createElement("tr");
+        tr.appendChild(id_td);
+        tr.appendChild(name_td);
+        tr.appendChild(sex_td);
+        tr.appendChild(delete_td);
+
+        var table = document.getElementById("biao");
+        table.appendChild(tr);
+    }*/
+
+    //方法二
+    var elementById_btn = document.getElementById("btn");
+    elementById_btn.onclick=function () {
+        //首先是获取输入的每一个元素值
+        var elementById_id = document.getElementById("id");
+        var id=elementById_id.value;
+        var elementById_name = document.getElementById("name");
+        var name=elementById_name.value;
+        var elementById_sex = document.getElementById("sex");
+        var sex=elementById_sex.value;
+
+        var table = document.getElementById("biao");
+        table.innerHTML +="<tr>\n" +
+            "        <td>"+id+"</td>\n" +
+            "        <td>"+sex+"</td>\n" +
+            "        <td>"+name+"</td>\n" +
+            "        <td>\n" +
+            "            <input type=\"button\" value=\"删除\" onclick=del_fun(this)></td>\n" +
+            "    </tr>";
+    }
+
+    function del_fun(obj) {
+        var table = obj.parentNode.parentNode.parentNode;
+        var tr = obj.parentNode.parentNode;
+        table.removeChild(tr);
+    }
+</script>
+</body>
+</html>

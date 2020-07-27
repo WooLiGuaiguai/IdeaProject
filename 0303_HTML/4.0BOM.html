@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM</title>
+    <style>
+        p{
+            text-align: center;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<!--<input id="opend" type="button" value="打开窗口">
+<input id="closed" type="button" value="guanbi窗口">-->
+<input id="get" type="button" value="获取历史记录">
+<input id="forword" type="button" value="前进">
+<p>
+    <span id="time">5</span>秒之后，跳转至首页
+</p>
+<script>
+    /*var a=confirm("您决定要退出吗？");
+    if(a){
+        alert("欢迎光临");
+    }else{
+        alert("拜拜");
+    }
+    var b=prompt("请输入用户名");
+    alert(b);*/
+
+    /*var uri;
+    var elementById = document.getElementById("opend");
+    elementById.onclick=function () {
+        //空参 点击之后就是空白页
+        //pen();
+        //有参数 点击之后就是相关链接
+        uri=open("https://www.baidu.com");
+    }
+    var elementById2 = document.getElementById("closed");
+    elementById2.onclick=function () {
+        //close(); //关闭当前窗口
+        uri.close();//关闭调用者窗口
+    }*/
+    /*var id=setTimeout("fun();",2000);
+    var id2=setTimeout(fun,2000);
+
+    var id3=setInterval(fun,2000);
+    clearInterval(id3);
+    function fun() {
+        document.write("定时开关");
+    }*/
+    /*var elementById = document.getElementById("opend");
+    elementById.onclick=function () {
+        location.reload();
+    }
+    var elementById2 = document.getElementById("closed");
+    elementById2.onclick=function () {
+        location.href="https://www.baidu.com";
+    }*/
+    //自动跳转
+    /*var second=5;
+    var elementById = document.getElementById("time");
+    function func1() {
+        second --;
+        if(second==0){
+            location.href="https://www.baidu.com";
+        }
+        elementById.innerHTML=second;
+    }
+    setInterval(func1,1000);*/
+    var elementById = document.getElementById("get");
+    elementById.onclick=function () {
+        document.write(history.length);
+    }
+    var elementById1 = document.getElementById("forword");
+    elementById1.onclick=function () {
+        history.go(3);
+    }
+
+</script>
+</body>
+</html>

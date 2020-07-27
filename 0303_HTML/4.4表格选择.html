@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格选择</title>
+    <style>
+        div{
+            text-align: center;
+            margin-top: 100px;
+        }
+        table{
+            border: 1px solid;
+            margin: auto;
+            margin-top: 50px;
+            width: 500px;
+        }
+        td,th{
+            text-align: center;
+            border: 1px solid;
+        }
+        .over{
+            background-color: pink;
+        }
+        .out{
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <input id="id" type="text" placeholder="请输入编号">
+    <input id="name" type="text" placeholder="请输入姓名">
+    <input id="sex" type="text" placeholder="请输入性别">
+
+    <input id="btn" type="button" value="添加">
+</div>
+<table id="biao">
+    <caption>学生信息表</caption>
+    <tr>
+        <th><input type="checkbox" name="cb" id="firstCb"></th>
+        <td>编号</td>
+        <td>性别</td>
+        <td>姓名</td>
+        <td>操作</td>
+    </tr>
+    <tr>
+        <th><input type="checkbox" name="cb" ></th>
+        <td>1</td>
+        <td>男</td>
+        <td>古力娜扎</td>
+        <td>
+            <input type="button" value="删除" onclick=del_fun(this)></td>
+    </tr>
+    <tr>
+        <th><input type="checkbox" name="cb" </th>
+        <td>2</td>
+        <td>男</td>
+        <td>迪丽热巴</td>
+        <td>
+            <input type="button" value="删除" onclick=del_fun(this)></td>
+    </tr>
+    <tr>
+        <th><input type="checkbox" name="cb" ></th>
+        <td>3</td>
+        <td>女</td>
+        <td>努尔基奇</td>
+        <td>
+            <input type="button" value="删除" onclick=del_fun(this)></td>
+    </tr>
+</table>
+<div>
+    <input type="button" id="selectAll" value="全选">
+    <input type="button" id="unSelectAll" value="全不选">
+    <input type="button" id="selectRev" value="反选">
+</div>
+
+<script>
+    window.onload=function () {
+        var elementById = document.getElementById("selectAll");
+        elementById.onclick=function () {
+            var elementsByName = document.getElementsByName("cb");
+            for(var i=0;i<elementsByName.length;i++){
+                elementsByName[i].checked=true;
+            }
+        }
+        var elementById = document.getElementById("unSelectAll");
+        elementById.onclick=function () {
+            var elementsByName = document.getElementsByName("cb");
+            for(var i=0;i<elementsByName.length;i++){
+                elementsByName[i].checked=false;
+            }
+        }
+        var elementById = document.getElementById("selectRev");
+        elementById.onclick=function () {
+            var elementsByName = document.getElementsByName("cb");
+            for(var i=0;i<elementsByName.length;i++){
+                elementsByName[i].checked = !elementsByName[i].checked;
+            }
+        }
+        var elementById = document.getElementById("firstCb");
+        elementById.onclick=function () {
+            var elementsByName = document.getElementsByName("cb");
+            for(var i=0;i<elementsByName.length;i++){
+                elementsByName[i].checked = this.checked;
+            }
+        }
+
+        var elementsByTagNames = document.getElementsByTagName("tr");
+        for(var i=0;i<elementsByTagNames.length;i++){
+            elementsByTagNames[i].onmouseover=function () {
+                this.className="over";
+            }
+            elementsByTagNames[i].onmouseout=function () {
+                this.className="out";
+            }
+        }
+    }
+
+
+    var elementById_btn = document.getElementById("btn");
+    elementById_btn.onclick=function () {
+        //首先是获取输入的每一个元素值
+        var elementById_id = document.getElementById("id");
+        var id=elementById_id.value;
+        var elementById_name = document.getElementById("name");
+        var name=elementById_name.value;
+        var elementById_sex = document.getElementById("sex");
+        var sex=elementById_sex.value;
+
+        var table = document.getElementById("biao");
+        table.innerHTML +="<tr>\n" +
+            "<th><input type=\"checkbox\" name=\"cb\" ></th>"+
+            "        <td>"+id+"</td>\n" +
+            "        <td>"+sex+"</td>\n" +
+            "        <td>"+name+"</td>\n" +
+            "        <td>\n" +
+            "            <input type=\"button\" value=\"删除\" onclick=del_fun(this)></td>\n" +
+            "    </tr>";
+    }
+
+    function del_fun(obj) {
+        var table = obj.parentNode.parentNode.parentNode;
+        var tr = obj.parentNode.parentNode;
+        table.removeChild(tr);
+    }
+</script>
+</body>
+</html>

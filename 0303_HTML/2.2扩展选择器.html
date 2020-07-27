@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扩展选择器</title>
+    <style>
+        div p{
+            color: purple;
+        }
+        div > p{
+            color: gold;
+        }
+        input[type="text"]{
+            border: 3cm gold solid;
+        }
+        Ali.a :link{
+            color: gold;
+        }
+        Ali.a :hover{
+            color: purple;
+        }
+        Ali.a :active{
+            color: green;
+        }
+        Ali.a :visited{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>奥利给
+        <p>
+            燕妮光明媚
+        </p>
+    </div>
+    <p>
+        大雨天
+    </p>
+    <div>加油</div>
+    <input type="text">
+    <Ali.a href="#">今天也是元气满满的一天</Ali.a>
+</body>
+</html>

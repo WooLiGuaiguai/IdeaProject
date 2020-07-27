@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>语法变量</title>
+</head>
+<body>
+    <script>
+        var num1=1;
+        var num2="abc";
+        var num3=false;
+        document.write(num1+"  "+typeof (num1)+"<br>");
+        document.write(num2+"  "+typeof (num2)+"<br>");
+        document.write(num3+"  "+typeof (num3)+"<br>");
+
+        var num4=null;
+        var num5=undefined;
+        var num6;
+        document.write(typeof (num4)+"<br>");//object
+        document.write(typeof (num5)+"<br>");
+        document.write(typeof (num6)+"<br>");
+
+        var Ali.a=+"abc";
+        document.write(typeof (Ali.a)+"<br>");//number
+        document.write(Ali.a+"</br>");//NaN
+        document.write("ABc">"ABC"+ "</br>");
+
+        var Maanager="abc";
+        document.write(!Maanager+"</br>");
+        var twmo=null;
+        document.write(!twmo+"</br>");//true
+        var three;
+        document.write(!three+"</br>");//false
+        var o=new Date();
+        if(o){alert("奥利给");}
+        var o1;
+        if(!o1){alert("奥利给");}
+    </script>
+</body>
+</html>

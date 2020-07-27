@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array</title>
+    <script>
+        var arr1=new Array(1,2,3);
+        var arr2=new Array(5);
+        var arr3=[1,2,3,4,5];
+        document.write(arr1+"<br>");//1,2,3
+        document.write(arr2+"<br>");//,,,, 五个元素 四个逗号
+        document.write(arr3+"<br>");//1,2,3,4,5
+
+        var arr4=[1,"abc",false];
+        document.write(arr4+"<br>");
+        document.write(arr4[0]+"<br>");
+        document.write(arr4[3]+"<br>");
+        arr4[10]="ABC";
+        document.write(arr4[10]+"<br>");
+
+        document.write(arr4.join("***")+"<br>");
+        arr4.push(987,"迪丽热巴");
+        document.write(arr4.join("***")+"<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

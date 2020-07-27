@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+</head>
+<body>
+<img id="light" src="image/off.gif">
+<script>
+    function func() {
+        if(flag){
+            elementById.src="image/off.gif";
+            flag=false;
+        }else{
+            elementById.src="image/on.gif";
+            flag=true;
+        }
+    }
+    var elementById = document.getElementById("light");
+    var flag=false;
+    elementById.onclick=func;
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+private HashSet<Character> set=new HashSet<>(Arrays.asList('a','e','i','o','u','A','E','I','O','U'));
+HashSet存在contains方法
+浅谈Arrays.asList()方法的使用#
+　首先，该方法是将数组转化为list。有以下几点需要注意：
+　　（1）该方法不适用于基本数据类型（byte,short,int,long,float,double,boolean）
+　　（2）该方法将数组与列表链接起来，当更新其中之一时，另一个自动更新
+　　（3）不支持add和remove方法
+
+验证回文字符串
+合并两个有序数组
+通过删除字母匹配字符串最长单词  重点
+判断链表是否存在环  循环条件中存在第一个指针、第二个指针、第二个指针下一个指针均不为空
+
+前k个高频元素      map.put(num,map.getOrDefault(num,0)+1); 获取数组中每个数字出现的频数 使用getOrDefault方法实现
+                   List<Integer>[] numlist=new ArrayList[nums.length+1];  频数数组频数可能等于数组长度，那么在numlist[频数]时就有可能越界
+排序都很重要
+
+贪心算法：都看看
+Arrays.sort(intervals, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[1]-o2[1];  这是升序的意思
+            }
+        });
+list的add(index,element)方法添加的时候先是向指定index添加元素，如果该位置已有元素，那么原来的元素向后移动
+        stringList.add(0, "string0");
+        stringList.add(0, "string1");
+        stringList.add(1, "string2");
+        stringList.add(1, "string3");
+        stringList.add(4, "string4");   结果是：[string1, string3, string2, string0, string4]
+
+(flowerbed[i]==0) && (i==0&&flowerbed[i+1]==0)||(i==flowerbed.length-1&&flowerbed[i-1]==0)||(flowerbed[i-1]==0&&flowerbed[i+1]==0)
+可以进行合并：(flowerbed[i]==0) && (i==0||flowerbed[i-1]==0) && (i==flowerbed.length-1||flowerbed[i+1]==0)
+
+二分查找： 需要注意的是这个判断条件，如果下面的操作语句中存在right=mid或者left=mid，那么若判断条件left<=right 很有可能一直循环不停止
+        while(left<right){
+            int mid=left+(right-left)/2;
+            if(isBadVersion(mid)){
+                right=mid;
+            }else{
+                left=mid+1;
+            }
+        }
+        return left;
+
+
+搜索：
+Pair键值对
+当一个函数返回两个值并且两个值都有重要意义时我们一般会用Map的key和value来表达，但是这样的话就需要两个键值对，
+用Map映射去做处理时，此时的key相当于value的一个描述或者引用，而具体的信息都保存在value中，我们可以通过key去获取对应的value。
+但是当key和value都保存具体信息时，我们就需要用到Pair对了。Pair对也是键值对的形式。
+ 具体的实现：
+    1.在javax.util包下，有一个简单Pair类可以直接调用，用法是直接通过构造函数将所吸引类型的Key和value存入，
+    这个key和value没有任何的对应关系类型也是任意定的。
+    用法：
+    Pair<String, String> pair = new Pair<>("aku", "female");
+    pair.getKey();
+    pair.getValue();
+    2.在Apache Commons库中，org.apache.commons.lang3.tuple 包中提供Pair抽象类，
+    它有两个子类，分别代表可变与不可变配对：ImmutablePair 和 MutablePair。两者都实现了访问key/value以及setter和getter方法。
+    Pair<String, String> pair = Pair.of("aku", "female");
+    pair.getLeft();
+    pair.getRight();
+    这种Pair的返回对一个函数返回两个都有意义的值有特别用处。
