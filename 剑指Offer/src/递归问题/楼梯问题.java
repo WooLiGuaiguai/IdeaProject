@@ -29,20 +29,20 @@ public class 楼梯问题 {
         }
     }
     public static int JumpFloorIII(int target){
-        int []arr=new int[target+1];
-        arr[0]=1;
-        arr[1]=1;
-        arr[2]=2;
         if(target==1||target==2){
             return target;
         }else{
+            int []Jumps=new int[target+1];
+            Jumps[0]=1;
+            Jumps[1]=1;
+            Jumps[2]=2;
             for(int i=3;i<=target;i++){
-                arr[i]=0;
-                for(int j=0;j<i;j++){
-                    arr[i]+=arr[j];
+                Jumps[i]=0;
+                for(int j=1;j<i;j++){
+                    Jumps[i]+=Jumps[j];
                 }
             }
-            return arr[target];
+            return Jumps[target];
         }
     }
 }

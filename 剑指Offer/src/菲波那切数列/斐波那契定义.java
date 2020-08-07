@@ -23,6 +23,7 @@ public class 斐波那契定义 {
             return sum;
         }
     }
+    //输出斐波那契数列第n项
     public static int Fibonacci2(int n){
         int a=1,b=1,result=0;
         if(n==0||n==1){
@@ -38,6 +39,7 @@ public class 斐波那契定义 {
             return result;
         }
     }
+
     public static int Fibonacci(int n){
         if(n==0||n==1){
             return n;
@@ -50,4 +52,5 @@ public class 斐波那契定义 {
         }
         return F[n];
     }
+
 }
