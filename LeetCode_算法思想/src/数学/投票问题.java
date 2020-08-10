@@ -16,11 +16,21 @@ package 数学;
 
 public class 投票问题 {
     public static int majorityElement(int[] nums){
+        if(nums==null||nums.length==0){
+            return 0;
+        }
         int candidate=nums[0];
-        int count=0;
-        for (int num : nums) {
-            candidate= (count==0) ? num:candidate;
-            count=(candidate==num) ? count+1:count-1;
+        int count=1;
+        for (int i=1;i<nums.length;i++) {
+            if(candidate==nums[i]){
+                count++;
+            }else {
+                count--;
+            }
+            if(count==0){
+                candidate=nums[i];
+                count=1;
+            }
         }
         return candidate;
     }
@@ -28,7 +38,10 @@ public class 投票问题 {
     public static void main(String[] args) {
         int []nums={7, 7, 5, 7, 5, 1 , 5, 7 , 5, 5, 7, 7 , 7, 7, 7, 7};
         int []nums1={1,1,1,2,3,3,3};
+        int []nums3={1,2,2,2,2,3,3,3,3,4,5};//1,2,3,2,4,2,5,2,3
+
         System.out.println(majorityElement(nums));
         System.out.println(majorityElement(nums1));
+        System.out.println(majorityElement(nums3));
     }
 }
