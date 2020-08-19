@@ -12,8 +12,8 @@ public class 斐波那契查找 {
         int left=0,right=array.length-1;
         int mid=0;
         int i=0;//遍历的指针
-        while(array.length>F[i]-1){//计算arr的长度在F数组中的位置    i=7
-            i++;
+        while(array.length>F[i]-1){//计算arr的长度在F数组中的位置    i=6
+            i++;//i=7
         }
         //利用Java工具类Arrays 构造新数组并指向 数组 arr[]
         int[] arr= Arrays.copyOf(array, F[i]);

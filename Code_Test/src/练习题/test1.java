@@ -1,4 +1,5 @@
-import org.junit.Test;
+package 练习题;
+
 public class test1 {
 
     private int[] arr;

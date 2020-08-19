@@ -157,9 +157,9 @@ public class 二叉搜索树 {
         BinaryTree.inorder(root);
         System.out.println(" ");
 
-        System.out.println("查询结点：");
+        System.out.println("查询结点8：");
         System.out.println(BinaryTree.SearchBST(root,8));
-        System.out.println("删除结点：");
+        System.out.println("删除结点6：");
         System.out.println(BinaryTree.deleteBST(root,6));
         BinaryTree.inorder(root);
     }

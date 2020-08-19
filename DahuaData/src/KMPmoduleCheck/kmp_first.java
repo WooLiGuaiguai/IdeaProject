@@ -1,13 +1,18 @@
 package KMPmoduleCheck;
 
+import java.util.Arrays;
+
 public class kmp_first {
+
     public static void main(String[] args) {
         String str1="ababcabcacbab";
         String T1="abc";
         String str="aaaabcde";
-        String T="aaaaax";
+        String T="aaa";
+        String str3="ababaaaba";
         System.out.println(INDEX_KMP(str1,T1,4));
         System.out.println(INDEX_KMP(str,T,0));
+        //System.out.println(Arrays.toString(get_next(str3)));
 
     }
     //      j= 1 2 3 4 5 6 7 8 9

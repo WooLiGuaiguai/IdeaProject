@@ -1,3 +1,5 @@
+package 练习题;
+
 public class test2_son extends test2{
     protected int z;
     int num=200;

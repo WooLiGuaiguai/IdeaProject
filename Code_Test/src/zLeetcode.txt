@@ -28,7 +28,7 @@
 763. 划分字母区间                                       /Code_Test/贪心算法/GA9    重点
 
 二分查找                    /Code_Test/查找/binary_search
-分治思想                    /Code_Test/divide_conque
+分治思想                    /Code_Test/练习题.divide_conque
 搜索查找BFS                 /Code_Test/查找/BFS
 搜索查找DFS                 /Code_Test/查找/DFS
 搜索查找回溯                /Code_Test/查找/Recall   /Code_Test/查找/Recall2

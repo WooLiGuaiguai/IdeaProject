@@ -1,3 +1,5 @@
+package 练习题;
+
 public class test2 {
         protected int x;
         protected int y;

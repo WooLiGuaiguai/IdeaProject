@@ -8,7 +8,7 @@ public class 直接插入排序 {
             System.out.print(a+" ");
         }
     }
-    public static void InsertSort(int []arr){
+    public static void InsertSort(int []arr){//升序
         for(int i=1;i<arr.length;i++){
             if(arr[i]<arr[i-1]){
                 int temp=arr[i];

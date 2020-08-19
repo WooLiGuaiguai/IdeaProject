@@ -58,6 +58,7 @@ public class 单词搜索 {
         }
         //否则就是没有找到
         flag[i][j]=false;
+        curlen--;
         return false;
     }
 }
