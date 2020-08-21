@@ -13,7 +13,7 @@ import java.util.HashSet;
 */
 public class 翻转字符串中的元音字母 {
     public static void main(String[] args) {
-        System.out.println(reverseVowels(" "));
+        System.out.println(reverseVowels("leetcode"));
     }
     private static HashSet<Character> set=new HashSet<>(Arrays.asList('a','e','i','o','u','A','E','I','O','U'));
     public static String reverseVowels(String s){
@@ -45,4 +45,5 @@ public class 翻转字符串中的元音字母 {
         }
         return new String(chars);
     }
+
 }

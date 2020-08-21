@@ -17,12 +17,12 @@ public class 需要交易费用的股票交易 {
         int n=prices.length;
         int []sell=new int[n];
         int []hold=new int[n];
-        sell[0]=0;
-        hold[0]=-prices[0];
-        for (int i=1;i<n;i++){
+        sell[0]=0;//手里没有股票
+        hold[0]=-prices[0];//手里有股票
+        for (int i=1;i<n;i++){//因为是为了求手里的钱最多是多少
             //结束当天 手头没有股票的原因，没有买或者卖了
             sell[i]=Math.max(sell[i-1],hold[i-1]+prices[i]-fee);
-            //结束当天 手头有股票，原因是没卖或者买了
+            //结束当天 手头有股票，原因是没卖或者前一天卖了之后买了
             hold[i]=Math.max(hold[i-1],sell[i-1]-prices[i]);
         }
         return Math.max(sell[n-1],hold[n-1]);

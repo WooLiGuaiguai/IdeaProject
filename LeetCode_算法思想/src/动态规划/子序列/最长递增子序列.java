@@ -1,5 +1,5 @@
 package 动态规划.子序列;
-
+//可删除几个元素之后的最长递增序列
 public class 最长递增子序列 {
     public static void main(String[] args) {
         int []nums={10,9,2,5,3,7,101,18};

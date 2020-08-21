@@ -24,10 +24,13 @@ public class 找零钱的最少硬币问题 {
         }
         return dp[amount] == 0 ? -1 : dp[amount];
     }
-    //Example 1:
-    //coins = [1, 2, 5], amount = 11
-    //return 3 (11 = 5 + 5 + 1)
-    //Example 2:
-    //coins = [2], amount = 3
-    //return -1.
+
+    public static void main(String[] args) {
+        int []coins = {1, 2, 5};
+        int amount = 11;
+        System.out.println(coinChange(coins,amount));//3
+        int []coins1 = {2};
+        int amount1 = 3;
+        System.out.println(coinChange(coins1,amount1));//-1
+    }
 }

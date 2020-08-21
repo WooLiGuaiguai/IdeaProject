@@ -1,5 +1,5 @@
 package 动态规划.斐波那契数列;
-
+//抢劫一排住户，但是不能抢邻近的住户，求最大抢劫量。
 public class 抢劫问题 {
     //抢劫的房子是环状连接的
     public static int rob2(int[] nums){
@@ -34,6 +34,9 @@ public class 抢劫问题 {
     }
 
     public static void main(String[] args) {
-
+        int []a={1,2,3,1};
+        int []b={2,7,9,3,1};
+        System.out.println(rob(a));
+        System.out.println(rob2(b));
     }
 }

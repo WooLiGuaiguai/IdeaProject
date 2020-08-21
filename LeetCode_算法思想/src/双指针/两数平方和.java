@@ -10,8 +10,9 @@ package 双指针;
  输出: False*/
 public class 两数平方和 {
     public static void main(String[] args) {
-        System.out.println(judgeSquareSum(0));
+        System.out.println(judgeSquareSum(3));
     }
+
     public static boolean judgeSquareSum(int c){
         int mid=(int)Math.sqrt(c);
         int left=0,right=mid;

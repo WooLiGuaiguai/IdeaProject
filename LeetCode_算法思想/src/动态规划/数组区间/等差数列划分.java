@@ -1,6 +1,6 @@
 package 动态规划.数组区间;
 //如果一个数列至少有三个元素，并且任意两个相邻元素之差相同，则称该数列为等差数列。
-//
+//函数要返回数组 A 中所有为等差数组的子数组个数。
 //例如，以下数列为等差数列:
 //1, 3, 5, 7, 9
 //7, 7, 7, 7
@@ -8,7 +8,7 @@ package 动态规划.数组区间;
 
 public class 等差数列划分 {
     public static void main(String[] args) {
-        int []A={1,2,3,4};
+        int []A={1,3,5,7,9};
         System.out.println(numberOfArithmeticSlices(A));
     }
     public static int numberOfArithmeticSlices(int[] A){

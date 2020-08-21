@@ -1,5 +1,5 @@
 package 分治;
-
+//求解编号1-n结点构成的不同的二叉树
 import Util.TreeNode;
 
 import java.util.LinkedList;

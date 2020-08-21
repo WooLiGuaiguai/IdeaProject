@@ -22,7 +22,7 @@ public class 通过删除字母匹配字符串最长单词 {
         for (String s1 : d) {
             int len=longword.length();
             int len1=s1.length();
-            if(len1<len||(len1==len&&longword.compareTo(s1)<0)){
+            if(len1<len||(len1==len&&longword.compareTo(s1)<0)){//后面这项是用来判断字典顺序是否大于前面的longword，要是大于不用后续的考虑
                 continue;
             }
             if(issbuTree(s,s1)){
