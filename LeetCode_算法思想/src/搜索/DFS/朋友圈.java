@@ -17,7 +17,7 @@ public class 朋友圈 {
         int count=0;//朋友圈个数
         for(int i=0;i<m;i++){
             if(!flag[i]){
-                DFS_friend(M,i,flag);
+                DFS_friend(M,i,flag);//确定可达结点 并把他们置为已访问
                 count++;
             }
         }

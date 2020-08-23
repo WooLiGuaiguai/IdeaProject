@@ -1,10 +1,10 @@
 package 排序;
-
+//给定一个非空的整数数组，返回其中出现频率前 k 高的元素。
 import java.util.*;
 
 public class 前K个高频元素 {
     public static void main(String[] args) {
-       int [] nums = {1,1,1,2,2,3};
+       int [] nums = {1,1,1,2,2,2,6,6,6,6};
         List<Integer> list=topKFrequent(nums,2);
         Iterator<Integer> it=list.iterator();
         while(it.hasNext()){
@@ -31,7 +31,7 @@ public class 前K个高频元素 {
             if(numlist[i]==null){
                 continue;
             }
-            if(numlist[i].size()<=k){
+            if(numlist[i].size()<=(k-list.size())){
                 list.addAll(numlist[i]);
             }else{
                 list.addAll(numlist[i].subList(0,k-list.size()));//现在list还缺少的个数

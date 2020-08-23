@@ -2,7 +2,7 @@ package 数学;
 
 public class 统计阶乘尾部有几个0 {
     public static void main(String[] args) {
-        System.out.println(trailingZeroes(25));
+        System.out.println(trailingZeroes(10000));
         System.out.println(trailingLastOne(5));
     }
     //1.给定一个整数 n，返回 n! 结果尾数中零的数量。

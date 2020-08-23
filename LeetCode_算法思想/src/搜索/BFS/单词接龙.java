@@ -35,7 +35,7 @@ public class 单词接龙 {
         if(endindex==n){
             return 0;//没有找到不可达
         }
-        //如果可以找到这个字符串 那么构建成一个图
+        //如果可以找到这个字符串 那么构建成一个图，数组每个元素是对应字符串的可达集合
         List<Integer>[] graphic=graphic_build(wordList);
         return BFS(graphic,startindex,endindex);//判断从起始坐标 到最终坐标是否可达
     }
@@ -67,7 +67,7 @@ public class 单词接龙 {
         Queue<Integer>queue=new LinkedList<>();
         boolean[] flag=new boolean[graphic.length];
         queue.add(startindex);
-        int level=1;//最后返回的长度
+        int level=1;//最后返回的长度  首先算上startindex
         while(!queue.isEmpty()){
             int size=queue.size();
             level++;

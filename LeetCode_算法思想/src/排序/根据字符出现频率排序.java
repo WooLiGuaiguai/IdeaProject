@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class 根据字符出现频率排序 {
     public static void main(String[] args) {
-
+        System.out.println(frequencySort("treeggttrrffjkloiu"));
     }
     public static String frequencySort(String s){
         char []chars=s.toCharArray();

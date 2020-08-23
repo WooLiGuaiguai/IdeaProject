@@ -12,10 +12,42 @@ import java.util.PriorityQueue;
 public class kth_element {
     public static void main(String[] args) {
         int []num={3,2,1,5,6,4};
-        System.out.println(findKthLargest2(num,2));
+        int []num1={3,2,1,5,6,4};
+        int []num2={3,2,1,5,6,4};
+        System.out.println(findKthLargest1(num,2));
+        System.out.println(findKthLargest2(num1,2));
+        System.out.println(findKthLargest3(num2,2));
     }
     //3.快速选择 ：时间复杂度 O(N)，空间复杂度 O(1)
-
+    public static int findKthLargest3(int[] nums, int k){
+        int low=0,high=nums.length-1;
+        while(low<high){
+            int pivot=Partition(nums,low,high);
+            if (pivot == nums.length-k) {
+                break;
+            }else if(pivot>k){
+                high=pivot-1;
+            }else {
+                low=pivot+1;
+            }
+        }
+        return nums[nums.length-k];
+    }
+    public static int Partition(int []nums,int low,int high){
+        int temp=nums[low];
+        while(low<high){
+            while(low<high && nums[high]>temp){
+                high--;
+            }
+            nums[low]=nums[high];
+            while(low<high && nums[low]<temp){
+                low++;
+            }
+            nums[high]=nums[low];
+        }
+        nums[low]=temp;
+        return low;
+    }
     //2.使用堆  时间复杂度 O(NlogK)，空间复杂度 O(K)。
     //用于求解 TopK Elements 问题，也就是 K 个最小元素的问题。
     //可以维护一个大小为 K 的最小堆，最小堆中的元素就是最小元素。最小堆需要使用大顶堆来实现，大顶堆表示堆顶元素是堆中最大元素
@@ -33,8 +65,8 @@ public class kth_element {
         return queue.peek();
     }
     //1.数组直接排序  时间复杂度 O(NlogN)，空间复杂度 O(1)
-    public int findKthLargest1(int[] nums, int k){
+    public static int findKthLargest1(int[] nums, int k){
         Arrays.sort(nums);
-        return nums[k-1];
+        return nums[nums.length-k];
     }
 }

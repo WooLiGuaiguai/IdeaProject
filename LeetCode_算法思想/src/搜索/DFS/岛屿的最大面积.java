@@ -26,7 +26,7 @@ public class 岛屿的最大面积 {
         int area=0;//面积
         for(int i=0;i<m;i++){
             for (int j=0;j<n;j++){
-                area=Math.max(area,DFS_area(grid,i,j));//从(0,0)到下标(i,j)的连通面积之和
+                area=Math.max(area,DFS_area(grid,i,j));//从(0,0)到下标(i,j)的连通面积最大值
             }
         }
         return area;
