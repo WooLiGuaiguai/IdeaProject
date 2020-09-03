@@ -10,12 +10,12 @@ public class Prim_map {
                 {5, m, 5, 0, m, 2},
                 {m, 3, 6, m, 0, 6},
                 {m, m, 4, 2, 6, 0}};//上图的矩阵
-        //System.out.println(prim(weight.length, weight));//求最短路径
-        prim(weight.length, weight);
+        System.out.println(prim(weight.length, weight));//求最短路径
+        //prim(weight.length, weight);
 
     }
-    public static void prim(int num,float[][]weight){
-        //float length=0;//路径总长度   求最短路径
+    public static float prim(int num,float[][]weight){
+        float length=0;//路径总长度   求最短路径
         //1.辅助数组
         float [] lowcost=new float[num];//记录每个点到集合的最小值
         int [] adjvex=new int[num];//记录与集合相连接的最小权边的点
@@ -40,7 +40,7 @@ public class Prim_map {
                 }
             }
             System.out.println("加入点："+j+" 相连接的边：（"+adjvex[j]+","+j+")  权值是："+min);
-            //length=length+min;求最短路径
+            length=length+min;//求最短路径
             visited[j]=true;
             //3.2 加入新点之后更新到各个结点的边的最小权值
             for(int k=1;k<num;k++){
@@ -50,6 +50,6 @@ public class Prim_map {
                 }
             }
         }
-        //return length;求最短路径
+        return length;//求最短路径
     }
 }
