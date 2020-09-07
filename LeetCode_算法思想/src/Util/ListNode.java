@@ -1,4 +1,4 @@
-package Util;
+package LeetCode_算法思想.src.Util;
 
 public class ListNode {
     public int val;//结点数据

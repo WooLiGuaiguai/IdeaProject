@@ -29,30 +29,20 @@ public class 合并两个有序链表 {
         if(list2==null){
             return list1;
         }
-        ListNode list=new ListNode(-1);
-        ListNode newHead=list;
+        ListNode newHead=new ListNode(-1);
+        ListNode pnext=newHead;
         while(list1!=null&&list2!=null){
-            if(list1.val>list2.val){
-                newHead.next=list2;
-                newHead=newHead.next;
-                list2=list2.next;
-            }else{
-                newHead.next=list1;
-                newHead=newHead.next;
+            if(list1.val<=list2.val){
+                pnext.next=list1;
                 list1=list1.next;
+            }else{
+                pnext.next=list2;
+                list2=list2.next;
             }
+            pnext=pnext.next;//不断的移动
         }
-        while(list1!=null){
-            newHead.next=list1;
-            newHead=newHead.next;
-            list1=list1.next;
-        }
-        while(list2!=null){
-            newHead.next=list2;
-            newHead=newHead.next;
-            list2=list2.next;
-        }
-        return list.next;
+        pnext.next=(list1==null)?list2:list1;
+        return newHead.next;
     }
 
 }
