@@ -38,7 +38,9 @@ public class 三数之和之最接近_双指针排序 {
 
     public static void main(String[] args) {
         int []num={-1,2,1,-4};
+        int []num2={2,1,-2,3};
         System.out.println(threeSumClosest(num,1));
+        System.out.println(threeSumClosest(num2,5));
 
     }
 
