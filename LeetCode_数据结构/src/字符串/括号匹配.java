@@ -2,7 +2,7 @@ package 字符串;
 
 import java.util.Stack;
 
-public class 字符串匹配 {
+public class 括号匹配 {
     public static void main(String[] args) {
         System.out.println(isValid("(([{}]))"));
         System.out.println(isValid("()[]{}"));
