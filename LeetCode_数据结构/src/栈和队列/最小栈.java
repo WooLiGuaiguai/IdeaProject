@@ -1,7 +1,7 @@
 package 栈和队列;
 
 import java.util.Stack;
-
+//在常数时间内检索到最小元素的栈
 public class 最小栈 {
     Stack<Integer> data_stack;
     Stack<Integer> min_stack;
